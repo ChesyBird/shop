@@ -16,15 +16,25 @@ function App() {
   const [username, setUsername] = useState("");
 
   // 로그인 함수
-  const handleLogin = () => {
+  const handleLogin = (username) => {
     setIsLoggedIn(true);
+    setUsername(username); // 로그인한 사용자 상태(ID) 저장
+  }
+
+  // 로그아웃 핸들러 함수
+  const handleLogout = () => {
+    setIsLoggedIn(false);
   }
 
   return (
     <>
       <section className='app'>
         <BrowserRouter>
-        <Header isLoggedIn={isLoggedIn} />
+        <Header
+          isLoggedIn={isLoggedIn}
+          username={username}
+          onLogout={handleLogout}
+        />
         <div className="container">
           <Routes>
             <Route path='/' element={<Main />} />
