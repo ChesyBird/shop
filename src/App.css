@@ -80,3 +80,20 @@
     cursor: pointer;
     margin: 4px;
 }
+
+/* 로그인 스타일 */
+.sign-in form {
+    width: 30%;
+    margin: 20px auto;
+    text-align: left;
+}
+.sign-in input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+}
+.sign-in form button {
+    width: 100%;
+    padding: 8px 12px;
+    margin-left: 3%;
+}
