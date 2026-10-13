@@ -68,7 +68,7 @@ body {
 
 /* 전역 */
 .container {
-    width: 1100px;
+    max-width: 1100px;
     margin: 20px auto;
 }
 .container div h2 {
