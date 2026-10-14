@@ -1,6 +1,6 @@
 import { useState } from "react";
 import users from "../datas/users";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const SignIn = ({onLogin}) => {
@@ -75,9 +75,12 @@ const SignIn = ({onLogin}) => {
                     <button type="submit">로그인</button>
                 </div>
             </form>
+            {/* 회원가입 링크 */}
+            <p className="signup-link">
+                아직 계정이 없으신가요? <Link to="/signup">회원가입</Link>
+            </p>
+
             {/* 결과메세지 출력 */}
-            {/* {result === "success" &&
-                (<p style={{color: "blue"}}>환영합니다.</p>)} */}
             {result === "fail" &&
                 (<p style={{color: "red"}}>아이디 또는 비밀번호를 확인해주세요.</p>)}
         </div>
